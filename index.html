@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2b241e">
+  <title>CEC 2026 · 注册台闯关</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./audio-map.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4.8A1.8 1.8 0 0 1 7.8 3h8.4A1.8 1.8 0 0 1 18 4.8V21l-6-3.8L6 21V4.8Z"></path></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6l-5 4H4Z"></path><path d="M16 9a4 4 0 0 1 0 6"></path><path d="M19 6a8 8 0 0 1 0 12"></path></symbol>
+    <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6l-5 4H4Z"></path><path d="m17 9 5 5M22 9l-5 5"></path></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H6l-3 2 1.2-4.2A8 8 0 1 1 21 12Z"></path></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1"></rect><rect x="15" y="3" width="6" height="6" rx="1"></rect><rect x="3" y="15" width="6" height="6" rx="1"></rect><path d="M15 15h2v2h-2zM20 15h1v6h-6v-1M15 20h2"></path></symbol>
+    <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="8.5" cy="10" r="2"></circle><path d="M5.5 16c.7-1.7 1.7-2.6 3-2.6s2.3.9 3 2.6M14 9h4M14 13h4M14 16h3"></path></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M2.5 9h19M7 15h3"></path></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"></path><path d="M9 3v15M15 6v15"></path></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.6 2.6 0 1 1 4.2 2.1c-1.2.8-1.8 1.3-1.8 2.9M12 18h.01"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
+    <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.5"></path><path d="M4 4v4.5h4.5"></path></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9 9.2c.6-1.1 1.7-1.7 3-1.7 1.4 0 2.4.7 2.4 1.8 0 2.8-5.5 1.2-5.5 4 0 1.2 1.1 2 2.8 2 1.4 0 2.5-.6 3.2-1.8M12 6v12"></path></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"></path></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"></path></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22V5.5ZM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22V5.5Z"></path></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"></path><path d="M5 10v10h14V10M9 20v-6h6v6"></path></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21M12 3C9.5 5.5 8.2 8.5 8.2 12s1.3 6.5 3.8 9"></path></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"></path></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"></path></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.5"></path><path d="M4 4v4.5h4.5"></path></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.4 4.6L18 9l-4.6 1.4L12 15l-1.4-4.6L6 9l4.6-1.4L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"></path></symbol>
+  </svg>
+
+  <div class="prototype-page">
+    <aside class="desktop-story" aria-label="Prototype overview">
+      <div class="story-brand"><div class="brand-c">C</div><div><p>CEC 2026 · SHANGHAI</p><strong>Registration Quest</strong></div></div>
+      <div class="story-copy">
+        <p class="story-kicker">VOLUNTEER ENGLISH · GAME PROTOTYPE</p>
+        <h1>Serve the guest.<br>Learn the line.</h1>
+        <p>A Midoo-inspired service game for the international registration desk. Listen to each guest, choose the right action, and complete the handoff.</p>
+      </div>
+      <div class="story-points">
+        <div><span>01</span><strong>Guest speaks</strong><p>Real CEC registration situations with local English audio.</p></div>
+        <div><span>02</span><strong>Choose the action</strong><p>Verify, print, guide, or escalate — one decision at a time.</p></div>
+        <div><span>03</span><strong>Build the streak</strong><p>Earn service points, level up, and review the ideal answer.</p></div>
+      </div>
+      <div class="story-note"><span>PROTOTYPE V2</span><p>Try one full shift. Every guest prompt and recommended answer has audio.</p></div>
+    </aside>
+
+    <main class="game-phone" id="gamePhone">
+      <header class="phone-status"><span>9:41</span><div><i></i><i></i><i></i></div></header>
+
+      <div class="game-content" id="gameContent">
+        <section class="game-screen" data-screen="game">
+          <header class="game-header">
+            <button type="button" class="round-ctrl" id="homeButton" aria-label="回到本班次开头"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></button>
+            <div class="game-title"><span>CEC 2026</span><h1>注册台闯关</h1></div>
+            <div class="header-actions"><button type="button" class="round-ctrl" id="soundButton" aria-label="关闭声音"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></button></div>
+          </header>
+
+          <section class="hud" aria-label="闯关进度">
+            <div class="score-card">
+              <span class="coin"><svg class="icon" aria-hidden="true"><use href="#i-coin"></use></svg></span>
+              <div><small>今日服务分</small><strong id="totalScore">0</strong></div>
+            </div>
+            <div class="level-card">
+              <div class="level-line"><span id="levelTag">Lv.1</span><strong id="levelName">注册新人</strong></div>
+              <div class="level-bar"><span id="levelBar"></span></div>
+            </div>
+            <div class="round-card">
+              <small>第 1 天 · 早高峰</small>
+              <strong><span id="roundNum">1</span><em>/ 8</em></strong>
+              <div class="round-dots" id="roundDots"></div>
+            </div>
+          </section>
+
+          <section class="scene" id="scene">
+            <div class="room-window"></div>
+            <div class="wall-panel panel-a"></div><div class="wall-panel panel-b"></div>
+            <div class="reg-sign"><span>CEC 2026</span><strong>REGISTRATION</strong><small>国际注册接待</small></div>
+            <div class="shelf"><span></span><span></span><span></span><i class="shelf-plant"></i></div>
+            <div class="guest-wrap"><img id="guestAvatar" src="./assets/guest-daniel.svg" alt="International guest"><div id="guestMood" class="guest-mood">耐心等待</div></div>
+            <div class="speech-bubble">
+              <div class="speech-top"><span><i></i> 顾客说</span><button type="button" id="replayButton"><svg class="icon" aria-hidden="true"><use href="#i-replay"></use></svg><span id="replayLabel">重听</span></button></div>
+              <p id="guestLine">I'm here to collect my badge.</p>
+              <div class="speech-meter"><span id="speechMeter"></span></div>
+            </div>
+            <div class="task-chip"><strong>下一步</strong><span id="taskHint">选择正确的接待动作</span></div>
+            <div class="desk">
+              <div class="desk-top"></div><div class="desk-front"><span></span><span></span><span></span></div>
+              <div class="printer"><span></span><b></b></div>
+              <div class="bag-stack"><i></i><i></i><i></i></div>
+              <div class="qr-stand"><span>QR</span></div>
+            </div>
+
+            <div class="success-overlay" id="successOverlay" hidden>
+              <div class="success-banner"><span class="success-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>交付成功 <em id="roundPoints">+90</em></strong><p>接待奖励 +18 · 连击 <b id="successStreak">1</b></p></div></div>
+              <div class="ideal-answer"><div><small>推荐英文</small><p id="idealAnswer"></p></div><button type="button" id="answerSpeak" aria-label="播放推荐答案"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></button></div>
+              <button type="button" class="game-primary" id="nextGuest">下一位顾客 <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
+            </div>
+
+            <div class="wrong-toast" id="wrongToast" hidden><strong>再试一次</strong><span id="wrongText">先判断顾客真正的需求。</span></div>
+
+            <div class="start-overlay" id="startOverlay">
+              <div class="start-card"><span class="start-badge">第 1 天 · 早高峰</span><h2>国际参会者即将到台</h2><p>听清英文需求，选择正确的接待动作。首次答对可得 <b>90</b> 服务分。</p><button type="button" class="game-primary" id="startButton"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>开始接待</button></div>
+            </div>
+
+            <div class="finish-overlay" id="finishOverlay" hidden>
+              <div class="finish-card"><span class="finish-star"><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg></span><h2>本班次完成</h2><p>你已完成 8 位国际参会者的接待。</p><div class="finish-score"><span>本班服务分</span><strong id="finishScore">0</strong></div><button type="button" class="game-primary" id="restartShift"><svg class="icon" aria-hidden="true"><use href="#i-replay"></use></svg>再来一班</button><button type="button" class="text-link" id="finishToPhrases">复习句型手册</button></div>
+            </div>
+          </section>
+
+          <section class="action-panel">
+            <div class="action-heading"><div><span>NEXT ACTION</span><strong>选择接待动作</strong></div><div class="streak-chip">连击 <b id="streakCount">0</b></div></div>
+            <div class="action-grid" id="actionGrid"></div>
+          </section>
+        </section>
+
+        <section class="library-screen" data-screen="phrases" hidden>
+          <header class="screen-heading"><div><span>PHRASE HANDBOOK</span><h1>国际注册句型手册</h1><p>搜索、分类和播放现场英文。</p></div><span class="handbook-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span></header>
+          <label class="search-box"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input id="phraseSearch" type="search" placeholder="搜索 badge、QR、shuttle..."></label>
+          <div class="category-row" id="categoryRow"></div>
+          <div class="library-list" id="libraryList"></div>
+        </section>
+
+        <section class="settings-screen" data-screen="settings" hidden>
+          <header class="screen-heading"><div><span>SETTINGS</span><h1>学习设置</h1><p>调整声音和重新开始本班次。</p></div><span class="handbook-icon"><svg class="icon" aria-hidden="true"><use href="#i-gear"></use></svg></span></header>
+          <section class="settings-card">
+            <div class="settings-title"><span><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></span><div><h2>语言设置</h2><p>界面显示与学习内容可分别设置。</p></div></div>
+            <div class="setting-label">界面语言</div><div class="option-pills"><button class="setting-pill active" type="button">中文</button><button class="setting-pill" type="button" disabled>English</button></div>
+            <div class="setting-label">学习语言</div><div class="option-pills"><button class="setting-pill" type="button" disabled>中文</button><button class="setting-pill active" type="button">English</button></div>
+          </section>
+          <section class="settings-card">
+            <div class="settings-row"><div><strong>自动播放顾客语音</strong><p>每轮开始时自动播放英文需求。</p></div><label class="switch"><input type="checkbox" id="autoPlayToggle" checked><span></span></label></div>
+            <div class="settings-row"><div><strong>播放速度</strong><p>调整英文语音速度。</p></div><div class="speed-control"><input id="speedRange" type="range" min="0.7" max="1.2" step="0.1" value="0.9"><span id="speedValue">0.9×</span></div></div>
+          </section>
+          <button class="danger-outline" id="resetGame" type="button"><svg class="icon" aria-hidden="true"><use href="#i-reset"></use></svg>清空服务分并重新开始</button>
+          <p class="settings-footnote">当前版本为交互原型。全部英文语音为本地音频。</p>
+        </section>
+      </div>
+
+      <nav class="game-nav" aria-label="Main navigation">
+        <button type="button" class="nav-item active" data-tab="game"><span><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span><small>闯关</small></button>
+        <button type="button" class="nav-item" data-tab="phrases"><span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span><small>句型</small></button>
+        <button type="button" class="nav-item" data-tab="settings"><span><svg class="icon" aria-hidden="true"><use href="#i-gear"></use></svg></span><small>设置</small></button>
+      </nav>
+
+      <div class="phrase-overlay" id="phraseOverlay" hidden>
+        <button type="button" class="overlay-scrim" id="phraseOverlayClose" aria-label="关闭"></button>
+        <div class="phrase-sheet" role="dialog" aria-modal="true" aria-labelledby="phraseTitle">
+          <div class="sheet-head"><span id="phraseCategory">GREETING</span><button type="button" id="sheetClose" aria-label="关闭"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button></div>
+          <h2 id="phraseTitle"></h2>
+          <div class="sheet-answer"><span>建议回答</span><p id="phraseAnswer"></p><button type="button" id="phraseSpeak"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></button></div>
+          <div class="sheet-note"><span>场景提示</span><p id="phraseTip"></p></div>
+          <div class="sheet-chunks" id="phraseChunks"></div>
+          <div class="sheet-actions"><button type="button" id="phraseSave"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"></use></svg><span>收藏</span></button><button type="button" id="phraseMaster"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg><span>标记已练</span></button></div>
+        </div>
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+</body>
+</html>

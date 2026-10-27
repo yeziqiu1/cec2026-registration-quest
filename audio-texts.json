@@ -1,0 +1,190 @@
+[
+  {
+    "text": "Good morning. Welcome to CEC 2026. How may I help you?",
+    "file": "audio/89cbda27a4f06e2d.wav"
+  },
+  {
+    "text": "Yes, it is. How may I help you?",
+    "file": "audio/7600db5e74904d40.wav"
+  },
+  {
+    "text": "Certainly. May I have your name, please?",
+    "file": "audio/ecb090e1364a4396.wav"
+  },
+  {
+    "text": "Thank you. One moment, please. I'll check your registration.",
+    "file": "audio/a4785bc709dd3862.wav"
+  },
+  {
+    "text": "May I see your registration QR code and photo ID, please?",
+    "file": "audio/81c8ea6e35c33aeb.wav"
+  },
+  {
+    "text": "Thank you. May I confirm your institution, please?",
+    "file": "audio/624709783e38542a.wav"
+  },
+  {
+    "text": "Could you spell that for me?",
+    "file": "audio/3f6b6866231861b2.wav"
+  },
+  {
+    "text": "So that's W-E-B-E-R, correct?",
+    "file": "audio/721f814be3da9903.wav"
+  },
+  {
+    "text": "Yes. Your badge is ready. Please check your name and affiliation.",
+    "file": "audio/5a98641d7a90b68d.wav"
+  },
+  {
+    "text": "Here is your conference bag and program.",
+    "file": "audio/d9759b2181554c21.wav"
+  },
+  {
+    "text": "Yes, please wear your badge at all times in the venue.",
+    "file": "audio/b7567e3a3fccae09.wav"
+  },
+  {
+    "text": "I'll correct it and print a new badge.",
+    "file": "audio/3a2a7dd5af3b7bbc.wav"
+  },
+  {
+    "text": "Yes. The onsite fee is [amount]. We accept [payment methods].",
+    "file": "audio/a3a589d2ecbb47a0.wav"
+  },
+  {
+    "text": "Yes. Would you like a printed or digital receipt?",
+    "file": "audio/4e9f0ef2341d1d51.wav"
+  },
+  {
+    "text": "For an invoice, please provide [details].",
+    "file": "audio/758959535b73d0fb.wav"
+  },
+  {
+    "text": "The main hall is on the [floor]. Take the escalator and turn [left/right] at [landmark].",
+    "file": "audio/03e077338bde5c74.wav"
+  },
+  {
+    "text": "Take the escalator to [floor] and follow the signs for the exhibition area.",
+    "file": "audio/9a9421ca7ec20860.wav"
+  },
+  {
+    "text": "It's on the 7th floor. Our colleagues there can check your slides.",
+    "file": "audio/5a90c31d7233f981.wav"
+  },
+  {
+    "text": "It's at [location]. The next bus leaves at [time].",
+    "file": "audio/6a03aa3cf8cf090b.wav"
+  },
+  {
+    "text": "It's [near the ...]. Let me show you on the map.",
+    "file": "audio/ca49f3461a1eeaa0.wav"
+  },
+  {
+    "text": "May I have your full name and email address? Let me check with my supervisor.",
+    "file": "audio/d1b839062b53e50e.wav"
+  },
+  {
+    "text": "Let me try again. If it still doesn't work, I'll help you with onsite registration.",
+    "file": "audio/8e849c65d64ee6bc.wav"
+  },
+  {
+    "text": "I'll check the replacement procedure with my supervisor.",
+    "file": "audio/262049f5e9408f53.wav"
+  },
+  {
+    "text": "I'll connect you with the right expert or conference team.",
+    "file": "audio/0c95de7430e22271.wav"
+  },
+  {
+    "text": "Let me arrange assistance for you.",
+    "file": "audio/2298a2f523fa7f51.wav"
+  },
+  {
+    "text": "I understand. Let me bring my supervisor to help you.",
+    "file": "audio/dcff6a8645ebcbca.wav"
+  },
+  {
+    "text": "I'll call the on-site medical team immediately.",
+    "file": "audio/b934a51ef1fec13c.wav"
+  },
+  {
+    "text": "I'm sorry, photography of speaker slides is not permitted.",
+    "file": "audio/71714671539ecbdf.wav"
+  },
+  {
+    "text": "I'm here to collect my badge.",
+    "file": "audio/914e2965e0d7189d.wav"
+  },
+  {
+    "text": "What do you need from me?",
+    "file": "audio/c059da0e3891ff46.wav"
+  },
+  {
+    "text": "My family name is Weber.",
+    "file": "audio/fa78b2ccb175d3f7.wav"
+  },
+  {
+    "text": "Is my badge ready?",
+    "file": "audio/6403bda2960f5f24.wav"
+  },
+  {
+    "text": "Where is the Speaker Preview Room?",
+    "file": "audio/f956f5126d2ecf97.wav"
+  },
+  {
+    "text": "I can't find my registration.",
+    "file": "audio/d13d9184d887c2e3.wav"
+  },
+  {
+    "text": "Can you answer a medical question?",
+    "file": "audio/850c7d36590df227.wav"
+  },
+  {
+    "text": "This is a medical emergency.",
+    "file": "audio/0d3c1a57ec773922.wav"
+  },
+  {
+    "text": "Welcome to CEC 2026.",
+    "file": "audio/e0add1a2cfe6f40f.wav"
+  },
+  {
+    "text": "May I have your name, please?",
+    "file": "audio/6c5cc815c8ec2e02.wav"
+  },
+  {
+    "text": "May I see your QR code and ID?",
+    "file": "audio/38d8ec1a1268faa3.wav"
+  },
+  {
+    "text": "One moment, please. I'll check.",
+    "file": "audio/87a1ec265e3e1f45.wav"
+  },
+  {
+    "text": "Your badge is ready.",
+    "file": "audio/699532143abbb9f6.wav"
+  },
+  {
+    "text": "Please check your name and affiliation.",
+    "file": "audio/1ea5f0b47e9f2f56.wav"
+  },
+  {
+    "text": "Let me show you on the map.",
+    "file": "audio/52bc066c8801dd42.wav"
+  },
+  {
+    "text": "Let me check with my supervisor.",
+    "file": "audio/bc0ed86f0300a296.wav"
+  },
+  {
+    "text": "Thank you. Enjoy the conference.",
+    "file": "audio/a11f6d3a91fdc36d.wav"
+  },
+  {
+    "text": "Could you repeat that, please?",
+    "file": "audio/34061763548a35ff.wav"
+  },
+  {
+    "text": "Let me confirm that.",
+    "file": "audio/cc1867799c22563b.wav"
+  }
+]

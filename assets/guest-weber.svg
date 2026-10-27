@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 280">
+  <defs>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2e7c7a"/><stop offset="1" stop-color="#174d52"/></linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efc19e"/><stop offset="1" stop-color="#c88464"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <ellipse cx="110" cy="261" rx="82" ry="14" fill="#5d3b2c" opacity=".16" filter="url(#soft)"/>
+  <path d="M27 276c7-57 36-83 83-83s77 27 83 83Z" fill="url(#shirt)"/>
+  <path d="M80 205c9 11 19 16 30 16s21-5 30-16l17 71H63Z" fill="#f1e6d3"/>
+  <path d="M98 191h25v40c-8 8-17 8-25 0Z" fill="url(#skin)"/>
+  <path d="M89 207l21 23 22-23 9 10-31 39-31-39Z" fill="#b54e3b"/>
+  <path d="M89 209l15 35-9 24H57c5-29 16-49 32-59ZM131 209l-15 35 9 24h38c-5-29-16-49-32-59Z" fill="#2a403f"/>
+  <ellipse cx="61" cy="139" rx="13" ry="20" fill="#cf8b69"/><ellipse cx="159" cy="139" rx="13" ry="20" fill="#cf8b69"/>
+  <path d="M52 117c0-51 25-81 58-81 36 0 60 31 58 80-2 43-25 76-57 76-34 0-57-32-59-75Z" fill="url(#skin)"/>
+  <path d="M50 105c0-44 23-75 62-75 40 0 63 36 59 82-9-31-21-50-37-58-17 17-44 24-82 21Z" fill="#c9c9c5"/>
+  <path d="M55 66c12-30 40-43 67-38 27 4 46 25 51 52-23-13-43-20-61-20-20 0-39 7-57 20Z" fill="#e6e5df"/>
+  <path d="M75 119c11-5 22-5 33 0M124 119c10-5 21-4 30 1" fill="none" stroke="#77513e" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="91" cy="128" rx="5" ry="7" fill="#1b2430"/><ellipse cx="141" cy="128" rx="5" ry="7" fill="#1b2430"/>
+  <g fill="none" stroke="#323842" stroke-width="4"><rect x="67" y="112" width="47" height="31" rx="9"/><rect x="120" y="112" width="47" height="31" rx="9"/><path d="M114 126h6"/></g>
+  <path d="M112 145c-2 11-1 18 6 20" fill="none" stroke="#ac654f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 175c6 15 19 24 32 24 13 0 25-8 31-22-12 7-21 10-31 10-11 0-21-4-32-12Z" fill="#d6d2ca"/>
+  <path d="M94 181c10 7 22 8 34 2" fill="none" stroke="#9e5b48" stroke-width="4" stroke-linecap="round"/>
+</svg>
