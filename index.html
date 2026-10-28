@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./styles.css">
   <script src="./audio-map.js" defer></script>
   <script src="./data.js" defer></script>
+  <script src="./levels.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
@@ -40,6 +41,7 @@
     <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"></path></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"></path></symbol>
     <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.5"></path><path d="M4 4v4.5h4.5"></path></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.4 4.6L18 9l-4.6 1.4L12 15l-1.4-4.6L6 9l4.6-1.4L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"></path></symbol>
   </svg>
 
@@ -80,8 +82,8 @@
               <div class="level-bar"><span id="levelBar"></span></div>
             </div>
             <div class="round-card">
-              <small>第 1 天 · 早高峰</small>
-              <strong><span id="roundNum">1</span><em>/ 8</em></strong>
+              <small id="dayLabel">第 1 天 · 早高峰</small>
+              <strong><span id="roundNum">1</span><em>/ <span id="roundTotal">12</span></em></strong>
               <div class="round-dots" id="roundDots"></div>
             </div>
           </section>
@@ -95,6 +97,7 @@
             <div class="speech-bubble">
               <div class="speech-top"><span><i></i> 顾客说</span><button type="button" id="replayButton"><svg class="icon" aria-hidden="true"><use href="#i-replay"></use></svg><span id="replayLabel">重听</span></button></div>
               <p id="guestLine">I'm here to collect my badge.</p>
+              <div class="speech-foot"><span>顾客等待</span><small id="patienceText">50s</small></div>
               <div class="speech-meter"><span id="speechMeter"></span></div>
             </div>
             <div class="task-chip"><strong>下一步</strong><span id="taskHint">选择正确的接待动作</span></div>
@@ -106,7 +109,7 @@
             </div>
 
             <div class="success-overlay" id="successOverlay" hidden>
-              <div class="success-banner"><span class="success-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>交付成功 <em id="roundPoints">+90</em></strong><p>接待奖励 +18 · 连击 <b id="successStreak">1</b></p></div></div>
+              <div class="success-banner"><span class="success-check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><div><strong>交付成功 <em id="roundPoints">+90</em></strong><p><span id="successDetail">接待奖励 +18</span> · 连击 <b id="successStreak">1</b></p></div></div>
               <div class="ideal-answer"><div><small>推荐英文</small><p id="idealAnswer"></p></div><button type="button" id="answerSpeak" aria-label="播放推荐答案"><svg class="icon" aria-hidden="true"><use href="#i-volume"></use></svg></button></div>
               <button type="button" class="game-primary" id="nextGuest">下一位顾客 <svg class="icon" aria-hidden="true"><use href="#i-chevron"></use></svg></button>
             </div>
@@ -118,18 +121,18 @@
             </div>
 
             <div class="finish-overlay" id="finishOverlay" hidden>
-              <div class="finish-card"><span class="finish-star"><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg></span><h2>本班次完成</h2><p>你已完成 8 位国际参会者的接待。</p><div class="finish-score"><span>本班服务分</span><strong id="finishScore">0</strong></div><button type="button" class="game-primary" id="restartShift"><svg class="icon" aria-hidden="true"><use href="#i-replay"></use></svg>再来一班</button><button type="button" class="text-link" id="finishToPhrases">复习句型手册</button></div>
+              <div class="finish-card"><span class="finish-star"><svg class="icon" aria-hidden="true"><use href="#i-star"></use></svg></span><h2>本班次完成</h2><p>你已完成 <span id="finishGuests">12</span> 位国际参会者的接待。</p><div class="finish-stars" id="finishStars">★★★</div><div class="finish-score"><span>本班服务分</span><strong id="finishScore">0</strong></div><div class="finish-stats"><div><strong id="finishAccuracy">0%</strong><span>一次答对</span></div><div><strong id="finishBestStreak">0</strong><span>最高连击</span></div></div><button type="button" class="game-primary" id="restartShift"><svg class="icon" aria-hidden="true"><use href="#i-replay"></use></svg>再来一班</button><button type="button" class="text-link" id="finishToPhrases">复习句型手册</button></div>
             </div>
           </section>
 
           <section class="action-panel">
-            <div class="action-heading"><div><span>NEXT ACTION</span><strong>选择接待动作</strong></div><div class="streak-chip">连击 <b id="streakCount">0</b></div></div>
+            <div class="action-heading"><div><span>NEXT ACTION</span><strong id="actionTitle">选择接待动作</strong></div><div class="action-meta"><span class="step-chip" id="stepChip">步骤 1/2</span><span class="streak-chip">连击 <b id="streakCount">0</b></span></div></div>
             <div class="action-grid" id="actionGrid"></div>
           </section>
         </section>
 
         <section class="library-screen" data-screen="phrases" hidden>
-          <header class="screen-heading"><div><span>PHRASE HANDBOOK</span><h1>国际注册句型手册</h1><p>搜索、分类和播放现场英文。</p></div><span class="handbook-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span></header>
+          <header class="screen-heading"><div><span>PHRASE HANDBOOK</span><h1>国际注册句型手册</h1><p>搜索、分类和播放现场英文。</p></div><div class="handbook-side"><span id="phraseMastery">0 / 28 已练</span><span class="handbook-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span></div></header>
           <label class="search-box"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input id="phraseSearch" type="search" placeholder="搜索 badge、QR、shuttle..."></label>
           <div class="category-row" id="categoryRow"></div>
           <div class="library-list" id="libraryList"></div>
@@ -137,6 +140,9 @@
 
         <section class="settings-screen" data-screen="settings" hidden>
           <header class="screen-heading"><div><span>SETTINGS</span><h1>学习设置</h1><p>调整声音和重新开始本班次。</p></div><span class="handbook-icon"><svg class="icon" aria-hidden="true"><use href="#i-gear"></use></svg></span></header>
+          <section class="settings-card stats-card">
+            <div class="stats-grid"><div><strong id="statShifts">0</strong><span>完成班次</span></div><div><strong id="statBest">0</strong><span>最高班次分</span></div><div><strong id="statStreak">0</strong><span>最高连击</span></div></div>
+          </section>
           <section class="settings-card">
             <div class="settings-title"><span><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></span><div><h2>语言设置</h2><p>界面显示与学习内容可分别设置。</p></div></div>
             <div class="setting-label">界面语言</div><div class="option-pills"><button class="setting-pill active" type="button">中文</button><button class="setting-pill" type="button" disabled>English</button></div>

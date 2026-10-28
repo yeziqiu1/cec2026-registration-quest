@@ -4,8 +4,8 @@ A mobile-first, Midoo-inspired English practice game for volunteers working at t
 
 ## Features
 
-- Eight service scenarios: greeting, verification, badge handoff, directions, escalation, medical privacy, and emergencies.
-- Choose-the-correct-action gameplay with points, streaks, levels, and a full shift summary.
+- Twelve guests and 26 service steps covering greeting, verification, badge handoff, directions, payment, escalation, medical privacy, and emergencies.
+- Multi-step service gameplay with a 50-second patience meter, speed bonuses, streaks, levels, star ratings, and a full shift summary.
 - Local English audio for every guest prompt and recommended answer.
 - Phrase handbook with 28 searchable English responses.
 - Installable mobile web app manifest.
